@@ -1,0 +1,37 @@
+{
+  "name": "components",
+  "version": "0.1.0",
+  "private": true,
+  "sideEffects": "false",
+  "scripts": {
+    "build:wc": "vue-cli-service build --mode production --target wc-async --name jds --dest dist/wc './src/components/**/*.vue'",
+    "build:lib": "vue-cli-service build --mode production --target lib --name jds-design-system --formats=commonjs,umd-min --dest dist/lib src/index.js",
+    "build:app": "vue-cli-service build --mode production --target app --dest app-bundle --report",
+    "build:esm": "(rm -rf dist/esm || 1) && cross-env NODE_ENV=build_esm babel src --out-dir dist/esm/ --copy-files",
+    "playground:vue": "./node_modules/.bin/env-cmd -x vue-cli-service serve --port=\\$PLAYGROUND_VUE_PORT",
+    "playground:wc": "./node_modules/.bin/env-cmd -x live-server --entry-file=./playground-wc/index.html --port=\\$PLAYGROUND_WC_PORT --ignore=./node_modules,./playground-vue",
+    "dev": "concurrently \"npm run build:wc -- --watch\" \"npm run build:lib -- --watch\" \"npm run build:esm -- --watch\" \"npm run playground:vue\" \"npm run playground:wc\"",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "concurrently": "^6.2.0",
+    "cross-env": "^7.0.3",
+    "env-cmd": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "live-server": "^1.2.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

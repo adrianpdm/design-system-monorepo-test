@@ -1,0 +1,28 @@
+{
+  "name": "@jabardigitalservice/jds-design-system",
+  "version": "0.0.4--alpha",
+  "private": false,
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "repository": {
+    "url": "",
+    "directory": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "license": "",
+  "main": "dist/esm/index.js",
+  "es2015": "dist/esm/index.js",
+  "es2017": "dist/esm/index.js",
+  "module": "dist/lib/jds-design-system.umd.min",
+  "unpkg": "dist/wc/jds.min.js",
+  "sideEffects": "false",
+  "peerDependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  }
+}

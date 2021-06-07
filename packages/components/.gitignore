@@ -1,0 +1,8 @@
+# Build directories
+dist/*
+!dist/package.json
+app-bundle
+
+# Individual playground files
+playground-vue/App.vue
+playground-wc/index.html
