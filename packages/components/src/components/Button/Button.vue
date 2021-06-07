@@ -1,5 +1,8 @@
 <template>
-  <button>Button</button>
+  <div>
+    <img src="../../assets/vue.png">
+    <button>Button</button>
+  </div>
 </template>
 
 <script>
