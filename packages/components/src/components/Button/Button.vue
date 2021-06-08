@@ -1,12 +1,13 @@
 <template>
-  <div>
-    <img src="../../assets/vue.png">
-    <button>Button</button>
+  <div class="jds-btn">
+    wow
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
+
+<style lang="scss" scoped>
+@import '~@jabardigitalservice/jds-design-system-css/css/Button/button.css';
+</style>
